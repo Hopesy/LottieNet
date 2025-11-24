@@ -7,39 +7,38 @@
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
 
+    <!-- 忽略警告 -->
+    <NoWarn>NU1701</NoWarn>
+
     <!-- NuGet 包基本信息 -->
     <PackageId>LottieNet</PackageId>
     <Version>1.0.0</Version>
-    <Authors>MinoChat Team</Authors>
-    <Company>MinoChat</Company>
+    <Authors>Hopesy</Authors>
+    <Company>Saury</Company>
     <Product>LottieNet</Product>
     <Description>WPF Lottie animation library with dynamic and prerendered rendering modes. Supports high-performance animation playback using SkiaSharp, with two rendering strategies: dynamic real-time rendering and prerendered frame-based playback.</Description>
-    <Copyright>Copyright © 2025 MinoChat Team</Copyright>
+    <Copyright>Copyright © 2025 Hopesy</Copyright>
     <PackageTags>wpf;lottie;animation;csharp;prerendered;skia;skottie;dotnet;windows</PackageTags>
-
     <!-- 仓库和项目链接 -->
     <PackageProjectUrl>https://github.com/Hopesy/LottieNet</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Hopesy/LottieNet</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-
     <!-- 许可证 -->
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-
     <!-- 包文档 -->
     <PackageReadmeFile>README.md</PackageReadmeFile>
-
     <!-- 打包配置 -->
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <IncludeSymbols>True</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-
     <!-- 发布配置 -->
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <Title>LottieNet</Title>
+    <PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
-
   <ItemGroup>
     <!-- NuGet 依赖 -->
     <PackageReference Include="SkiaSharp.Skottie" Version="3.119.1" />
@@ -49,6 +48,13 @@
   <ItemGroup>
     <!-- 包含 README 到 NuGet 包 -->
     <None Include="..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
