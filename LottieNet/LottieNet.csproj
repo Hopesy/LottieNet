@@ -1,15 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <!-- 基础配置 -->
-    <TargetFramework>net8.0-windows</TargetFramework>
+    <!-- 基础配置 - 多目标框架 -->
+    <TargetFrameworks>net48;net8.0-windows</TargetFrameworks>
     <LangVersion>Latest</LangVersion>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
 
     <!-- 忽略警告 -->
     <NoWarn>NU1701</NoWarn>
-
     <!-- NuGet 包基本信息 -->
     <PackageId>LottieNet</PackageId>
     <Version>1.0.0</Version>
@@ -51,10 +50,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="icon.png">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
+    <None Include="icon.png" Pack="true" PackagePath="\" />
   </ItemGroup>
 
 </Project>
